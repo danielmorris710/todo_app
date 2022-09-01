@@ -7,7 +7,7 @@ export default function Todos() {
  const [todos, setTodos] = useState([])
     useEffect(()=>{ getTodos()
         .then(res => setTodos(res.data))
-    },[])
+    },[todos])
     console.log(todos)
 
     return(

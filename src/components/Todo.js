@@ -8,7 +8,7 @@ function Todo() {
     const [todo, setTodo] = useState({})
     useEffect(() => {getTodo(id)
     .then(res => setTodo(res.data))
-    }, [])
+    }, [todo])
 
     const deleteTheTodo = () => {
         deleteTodo(id) // service in todo api
